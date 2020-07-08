@@ -1,0 +1,32 @@
+.btn-outline-fuchsia:hover {
+  color: #fff;
+  background-color: fuchsia;
+  border-color: fuchsia;}
+  .btn:hover {
+    border-color: fuchsia;
+    text-decoration: none;
+}
+.btn-outline-fuchsia{
+  border-color: fuchsia;
+  color: fuchsia;
+}
+.card-image{
+
+  max-height: 289px;
+  max-width: 582px;
+  margin-left: 48%;
+}
+.card-image{
+  max-height:10rem;
+  max-width: max-content;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.txtNew{
+  font-size: 24px;
+  color:rgba(0, 0, 0, 0.856);
+  font-weight: bold;
+  text-align: center;
+}

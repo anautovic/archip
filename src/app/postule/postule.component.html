@@ -1,0 +1,47 @@
+
+<div class="card bg-light mb-3" style="max-width: 18rem;" *ngFor=" let postules of postule "   >
+    <div class="card-header"></div>
+    <div class="card-body">
+      <h5 class="card-title">    </h5>
+      <p class="card-text"> </p>
+      <ng-template #content let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>y&hellip;</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+        </div>
+      </ng-template>
+      
+      <ng-template #longContent let-modal>
+        <div class="modal-header">
+          <h4 class="modal-title"></h4>
+          <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p> </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+        </div>
+      </ng-template>
+      
+    
+      
+    </div>
+
+
+
+
+
+    <button class="btn btn-outline-primary mb-2 mr-2" (click)="openScrollableContent(longContent)">Modal scrollable content</button>
+
+

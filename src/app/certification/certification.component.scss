@@ -1,0 +1,81 @@
+
+a{
+  color: fuchsia;
+}
+.btn-outline-fuchsia:hover {
+  color: #fff;
+  background-color: fuchsia;
+  border-color: fuchsia;}
+  .btn:hover {
+    border-color: fuchsia;
+    text-decoration: none;
+}
+.btn-outline-fuchsia{
+  border-color: fuchsia;
+  color: fuchsia;
+}
+h1{
+  color: #002e5d;
+  margin-top: 2rem;
+  font-size: 2.125rem;
+  position: relative;
+};
+  h1::after{
+    background-color: fuchsia;
+    margin: 2;
+    bottom: -0.5rem;
+    content: '';
+    display: inline-block;
+    height: 0.3125rem;
+    left: 0;
+    position: absolute;
+    vertical-align: top;
+    width: 2.8125rem;
+  }
+  .paragraph--1{
+    border-left-color: fuchsia;
+    border-left:0.3125rem solid fuchsia;
+    box-sizing: border-box;
+    padding-left: 1.5em;
+    margin-top: 2em;
+    margin-right: 2em;
+    margin-bottom: auto;
+  }
+  .paragraphe--2{
+    border-left-color: fuchsia;
+    border-left:0.3125rem solid fuchsia;
+    box-sizing: border-box;
+    padding-left: 1.5em;
+    margin-top: 2em;
+    margin-right: 2em;
+    margin-bottom: auto;
+  }
+  .card-title {
+    font-size: 1.5rem;
+    display: block;
+    font-weight: bold;
+    margin: 0 0 1em;
+    color:#002e5d; 
+    padding:0 0 1em;
+  }
+  .encadre.encadre--1 {
+    color: #002e5d;
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.15)
+  }
+  .encadre {
+    margin-bottom: 1.5em;
+    margin-top: 6rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+#encadre {
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+.card-text{
+  color:#002e5d;
+}
+.card-img-top{
+  max-height:10rem;
+  max-width: max-content;
+}

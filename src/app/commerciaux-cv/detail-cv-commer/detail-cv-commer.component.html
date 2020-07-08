@@ -1,0 +1,146 @@
+<!--<div class="card-container" >
+    <div class="card">
+        
+        <div class="front">
+            <div class="cover">
+                <img src="../../assets/logo.jpg"/>
+            </div>
+            <div class="user">
+                <img class="img-circle" src="../../assets/mogang.png"/>
+            </div>
+            <div class="content">
+                <div class="main">
+                    <h3 class="name">{{coms.nom}</h3>
+                    <p class="profession">Mobilité :  {{candidats.mobilite}}</p>
+
+                    <p class="text-center">Salaire minimum : {{candidats.salaire_minimum}} <br></p>
+                </div>
+                <div class="footer">
+                    <div class="rating">
+                        <i class="fa fa-mail-forward"></i> Assistanat
+                    </div>
+                </div>
+            </div>
+        </div>  end front panel -->
+        <!--<div class="back">
+            <div class="header">
+                <h5 class="motto">  {{candidats.numero}} | {{candidats.adresse}} </h5>
+            </div>
+            <div class="content">
+                <div class="main">
+                    <h4 class="text-center">Experience proféssionelle</h4>
+                    <div class="container">
+                    <p class="text-center">
+                        
+                       {{candidats.naissance}}
+ </p>
+</div>
+
+                    <div class="stats-container">
+                        <div class="stats">
+                            <h4>Bien</h4>
+                            <p>
+                                Français
+                            </p>
+                        </div>
+                        <div class="stats">
+                            <h4>moyen</h4>
+                            <p>
+                                Anglais
+                            </p>
+                        </div>
+                        <div class="stats">
+                            <h4>null</h4>
+                            <p>
+                                Allemand
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer">
+                
+            </div>
+        </div>  end back panel 
+    
+        </div>
+        </div>-->
+
+
+       
+        <ng-container *ngFor= "let com of commerciauxArray; let i = index">
+            <div class="col">
+                
+
+
+
+                <div class="card" >
+                    <div class="cover">
+                        <img src="../../assets/logo.jpg"/>
+                    </div>
+                    <div class="user">
+                        <img class="img-circle" [src]= "com.image"/>
+                    </div>
+                    
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Prénom:  {{ com.prenom | uppercase}}</h5>
+                        <h5 class="card-title text-center">Sexe:  {{ com.sexe| titlecase}}</h5>
+                      
+                        
+                           <p class="card-text text-center">Mobilite:  {{com.mobilite | titlecase}}</p>
+                           <p class="card-text text-center">Salaire Minimum: {{com.salaire_minimum | currency:'XAF'}} <br>
+                            Nombre d'année d'experience:  {{com.nombre_experience}}</p>
+                            <p class=" card-text text-center" *ngIf= "com.permis">Permis:  {{com.permis | titlecase}}</p>
+                      
+                      
+                        <ng-template #longContent let-modal>
+                            <div class="modal-header">
+                              <h4 class="modal-title">DETAILS </h4>
+                              <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <h4 class="modal-title text-center">CENTRES D'INTERÊTS </h4>
+                                <ul class="list-group" *ngFor= "let exp of com.experience">
+                                    
+                                    <li class="list-group-item list-group-item-primary">
+                      {{exp.date_de_debut | uppercase}}-{{exp.date_de_fin |  uppercase}} | {{exp.entreprise | uppercase}} 
+                                        <p> Poste Occupé: {{exp.poste | uppercase}}</p>
+                                    </li>
+                         </ul>
+                         <h4 class="modal-title text-center">FORMATIONS </h4>
+                         <ul class="list-group" *ngFor= "let exp of com.formation">
+                                    
+                           <li class="list-group-item list-group-item-primary">
+                      {{exp.annee}} {{exp.diplome | titlecase}} | {{exp.ecole | titlecase}} 
+                              
+                           </li>
+                      </ul>
+                      <h4 class="modal-title text-center">CENTRES D'INTERÊTS </h4>
+                      <li class="list-group-item list-group-item-primary"> {{com.centreinteret | titlecase}}</li>
+                      <br>
+                           <h4 class="modal-title text-center">LANGUES </h4>
+                           <li class="list-group-item list-group-item-primary"> {{com.langue | titlecase}}</li>
+                         
+                                
+                            
+                            </div>
+                      
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+                            </div>
+                          </ng-template>
+                      
+                      
+                          <button class="btn btn-outline-primary mb-2 mr-2" 
+                          (click)="openScrollableContent(longContent)">En savoir plus...</button>
+                    </div>
+                  </div>
+
+
+            </div>
+            <div *ngIf="(i+1) % 2 === 0" class="w-100"></div>
+          </ng-container>
+

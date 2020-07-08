@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col-4 col-sm-4 col-md-6">
+            <app-list-cv-tel [teleoperateurs]="teleoperateurArray" (selectedPersonneTel)= "selectPersonne($event)"
+             ></app-list-cv-tel>
+        </div>
+        <div class="col-8 col-sm-8 col-md-6">
+            <app-detail-cv-tel *ngIf= "selectedPersonne" [teleoperateur]="selectedPersonne" ></app-detail-cv-tel>
+        </div>
+    </div>
+</div>
+

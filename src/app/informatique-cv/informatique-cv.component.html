@@ -1,0 +1,29 @@
+<!--<router-outlet></router-outlet>
+<div class="container">
+    
+    <div class="row">
+        <div class="col-md-6 col-sm3">
+            <app-list-cv-in (selectedPersonne)="selectPersonne($event)"
+            [informaticiens]= "informaticiensArray"></app-list-cv-in>
+        </div>
+        <div class="col-md-6 col-sm-9">
+            <app-detail-cv-in 
+            *ngIf="selectedPersonne" [informaticiens] = "selectedPersonne"></app-detail-cv-in>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>-->
+<router-outlet></router-outlet>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-4 col-sm-4 col-md-6">
+            <app-list-cv-in 
+            [candidats]= "informaticiensArray" (selectedPersonneIn)="selectPersonneIn($event)"></app-list-cv-in>
+        </div>
+        <div class="col-8 col-sm-8 col-md-6">
+            <app-detail-cv-in  *ngIf="selectedPersonneIn"
+            [candidat]= "selectedPersonneIn"></app-detail-cv-in>
+        </div>
+    </div>
+</div>

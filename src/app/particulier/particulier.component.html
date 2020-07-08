@@ -1,0 +1,45 @@
+
+      <div class="container-fluid mt-5" >
+   <h5 class="text-justify"><strong>ARCHIPEL</strong> met à disposition de ses clients des bases de contacts axées sur l'âge 
+        et le centre d’intérêt des particuliers.Vous êtes une entreprise et souhaitez rentrer en contact avec une cible particulière,
+         nous vous fournissons des contacts afin de vous accompagner dans votre communication.</h5>
+         <br>
+   <div class="container-fluid">
+             <div class="row">
+                 <div class="col-md-6">
+                    <div class="shadow p-3 mb-5 bg-white rounded"> <p class="text-center">
+                        <strong> Liste des centres d'intérêts et le nombre que nous possedons dans notre base de données
+                            pour des candidats dont la tranche d'âge est de 21 à 26 ans.</strong> 
+                    </p>
+                          
+                    <ul class="list-group" >
+                        <li class="list-group-item d-flex justify-content-between align-items-center"
+                         *ngFor="let particuliersMa of particulierMa" [@fade]="'in'">
+                         {{particuliersMa.name}}
+                          <span class="badge badge-primary badge-pill">{{particuliersMa.quantite}}</span>
+                        </li>
+                    </ul>
+                </div>
+                 </div>
+                 <div class="col-md-6" >
+                    <div class="shadow p-3 mb-5 bg-white rounded"> <p class="text-center"><strong>
+                        Liste des centres d'intérêts et le nombre que nous possedons dans notre base de données
+                        pour des candidats dont la tranche d'âge est de 26 à 35 ans.
+                    </strong>
+                        
+                    </p>
+                    <ul class="list-group" >
+                        <li class="list-group-item d-flex justify-content-between align-items-center"
+                         *ngFor="let particuliers of particulier" [@fade]="'out'">
+                         {{particuliers.name}}
+                          <span class="badge badge-primary badge-pill">{{particuliers.quantite}}</span>
+                        </li>
+                    </ul>
+                    </div>
+                </div>  
+             </div>
+   </div>
+         </div>
+         <app-footer></app-footer>
+        
+        

@@ -1,0 +1,13 @@
+
+
+<!--<ol class="list-group">
+    <app-item-cv-in  *ngFor="let informaticien of informaticiens"(selectedPersonne)="selectPersonne($event)"
+    [informaticiens]= "informaticien"></app-item-cv-in>
+    
+    </ol>-->
+    <ol class="list-group">
+        <app-item-cv-in *ngFor ="let candidat of candidats"
+        [candidat]= "candidat"  (selectedPersonneIn)="selectPersonneIn($event)"></app-item-cv-in>
+       
+        
+        </ol>

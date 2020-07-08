@@ -1,0 +1,24 @@
+<h3>Create database for Cameroon company</h3>
+
+  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+    <div class="form-group">
+      <label for="poste">Poste</label>
+      <input type="text" class="form-control" id="poste" required ngModel name="poste">
+    </div>
+ 
+    <div class="form-group">
+      <label for="entreprise">Nom de l'entreprise</label>
+      <input type="text" class="form-control" id="age" required ngModel name="nom">
+    </div>
+    <div class="form-group">
+        <label for="numero">Numero du contact</label>
+        <input type="text" class="form-control" id="numero" required ngModel name="numero">
+      </div>
+ 
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+
+ 
+
+  
+

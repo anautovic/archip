@@ -1,0 +1,20 @@
+<!--<li class="list-group-item active clearfix"  (click)= "selectPersonne()">
+    <div class="pull-left">
+        <h4 class="list-group-item-heading"> Vanissa</h4>
+        <p class="list-group-item-text">lieu de residence: Douala</p>
+    </div>
+    <div class="pull-right">
+        <img src="" width="50px">
+    </div>
+</li>-->
+<li class="list-group-item clearfix" (click)="selectPersonneIn()" >
+    <div class="pull-left">
+        <h4 class="list-group-item-heading"> {{candidat.prenom}}</h4>
+        <!--<p class="list-group-item-text">{{candidat.residence}}</p>-->
+    </div>
+    <div class="pull-right">
+        <img [src]="candidat.image" width="50px">
+    </div>
+</li>
+
+

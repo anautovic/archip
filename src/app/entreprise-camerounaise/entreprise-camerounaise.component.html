@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <h5 class="m-3">   ARCHIPEL vous met en contact avec des entreprises grâce 
+            à sa banque de données. Vous êtes une entreprise, un commercial,
+             un chercheur d'emploi vous souhaitez enrichir votre portefeuille client, chercheur d'emploi. Votre objectif est d'enrichir votre porte feuille client, contacter des responsables, nous mettons à disposition notre mine d'or de contacts actualisés régulièrement.
+
+            Juste pour vous ! </h5>
+            <hr>
+       <!-- <div class="col-md-6">
+            <app-create-ese-cameroun></app-create-ese-cameroun>
+        </div>
+        <div class="col-md-6">-->
+            <table class="table table-sm">
+                <thead>
+                    <th>Poste</th>
+                    <th>Nom</th>
+                    <th>numero</th>
+                </thead>
+                <ng-container *ngFor="let cameroun of camerounArray">
+<tr class="table-dark">
+    <td>{{cameroun.poste}}</td>
+    <td>  {{ cameroun.nom}} </td>
+   <!-- <td>  {{cameroun.numero}} </td>--> 
+</tr>
+                </ng-container>
+            </table>
+       <!--</div>--> 
+    </div>
+</div>

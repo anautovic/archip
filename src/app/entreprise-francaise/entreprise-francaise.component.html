@@ -1,0 +1,23 @@
+
+<div class="container"><h5 class="m-3"> ARCHIPEL vous met en contact avec 
+    des entreprises grâce à sa banque de données. Vous êtes une entreprise, un commercial,
+     un chercheur d'emploi, votre objectif est d'enrichir votre porte feuille CV, contacter des responsable d'entreprise nous mettons à disposition notre mine d'or de contacts actualisés régulièrement.
+Juste pour vous !</h5>
+<hr>
+
+<table class="table table-sm">
+    <thead>
+        <th>Poste</th>
+        <th>Nom</th>
+        <th>numero</th>
+    </thead>
+    <ng-container *ngFor="let francaise of francaiseArray">
+<tr class="table-dark">
+<td>{{francaise.poste}}</td>
+<td>  {{ francaise.nom}} </td>
+<td>  {{francaise.numero}} </td>
+</tr>
+    </ng-container>
+</table>
+</div>
+<app-footer></app-footer>
